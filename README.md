@@ -33,7 +33,7 @@ Gizwits Air-Purifier Demo App
 
 	▪	虚拟设备
         机智云官网提供GoKit虚拟设备的支持，链接地址：
-        http://site.gizwits.com/developer/product/2354/virtualdevice
+        http://site.gizwits.com/developer/product/2566/virtualdevice
 
 	▪	实体设备
         GoKit开发板。您可以在机智云官方网站上免费预约申请（限量10000台），申请地址：
