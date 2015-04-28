@@ -65,8 +65,6 @@ NSString * const IOT_PRODUCT       = @"b3a206e380bc4a3c8c157ff4b5491633";
     
     model.tintColor = self.navCtrl.navigationBar.tintColor;
     model.barTintColor = self.navCtrl.navigationBar.barTintColor;
-    if(model.isRegisteredUser)
-        [self.navCtrl pushViewController:model.deviceListController animated:NO];
     
     self.navCtrl.navigationBar.translucent = NO;
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName]];
