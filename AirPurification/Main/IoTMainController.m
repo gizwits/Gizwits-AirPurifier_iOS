@@ -55,6 +55,7 @@
     
     //临时数据
     NSArray *modeImages, *modeTexts;
+    BOOL isReiveSuccess;
     
     //时间选择
     IoTTimingSelection *_timingSelection;
@@ -297,10 +298,11 @@
 }
 
 //数据入口
-- (BOOL)XPGWifiDevice:(XPGWifiDevice *)device didReceiveData:(NSDictionary *)data result:(int)result{
-    
+- (void)XPGWifiDevice:(XPGWifiDevice *)device didReceiveData:(NSDictionary *)data result:(int)result{
     if(![device.did isEqualToString:self.device.did])
-        return YES;
+        return;
+    
+    isReiveSuccess = YES;
     
     [IoTAppDelegate.hud hide:YES];
     [self.shutdownStatusCtrl hide:YES];
@@ -353,7 +355,7 @@
         if(!bSwitch)
         {
             [self onPower];
-            return YES;
+            return;
         }
     }
     
@@ -362,7 +364,7 @@
      * 报警和错误
      */
     if([self.navigationController.viewControllers lastObject] != self)
-        return YES;
+        return;
     
     self.alerts = [data valueForKey:@"alerts"];
     self.faults = [data valueForKey:@"faults"];
@@ -375,7 +377,7 @@
     if(self.alerts.count == 0 && self.faults.count == 0)
     {
         [self onUpdateAlarm];
-        return YES;
+        return;
     }
     
     /**
@@ -388,7 +390,9 @@
         {
             for(NSString *name in dict.allKeys)
             {
-                [[IoTRecord sharedInstance] addRecord:date information:name];
+                if ([[dict valueForKey:name] intValue]) {
+                    [[IoTRecord sharedInstance] addRecord:date information:name];
+                }
             }
         }
     }
@@ -399,14 +403,16 @@
         {
             for(NSString *name in dict.allKeys)
             {
-                [[IoTRecord sharedInstance] addRecord:date information:name];
+                if ([[dict valueForKey:name] intValue]) {
+                    [[IoTRecord sharedInstance] addRecord:date information:name];
+                }
             }
         }
     }
     
     [self onUpdateAlarm];
     
-    return YES;
+    return;
 }
 
 - (CGFloat)prepareForUpdateFloat:(NSString *)str value:(CGFloat)value
@@ -440,6 +446,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    isReiveSuccess = NO;
     [self initDevice];
 }
 
@@ -464,6 +471,14 @@
         [IoTAppDelegate.hud showAnimated:YES whileExecutingBlock:^{
             sleep(61);
         }];
+//        [IoTAppDelegate.hud showAnimated:YES whileExecutingBlock:^{
+//            sleep(30);
+//            if (!isReiveSuccess) {
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [[[IoTAlertView alloc] initWithMessage:@"获取状态失败" delegate:nil titleOK:@"确定"] show:YES];
+//                });
+//            }
+//        }];
         [self writeDataPoint:IoTDeviceWriteUpdateData value:nil];
     }
     
@@ -548,6 +563,7 @@
     }
     
     //退出到列表
+    isReiveSuccess = YES;
     for(int i=(int)(self.navigationController.viewControllers.count-1); i>0; i--)
     {
         UIViewController *controller = self.navigationController.viewControllers[i];

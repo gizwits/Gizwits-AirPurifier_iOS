@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ACC7D971C44BA8C00ACA3E7 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACC7D961C44BA8C00ACA3E7 /* CoreTelephony.framework */; };
+		1ACC7D9C1C44E92C00ACA3E7 /* IoTVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC7D9A1C44E92C00ACA3E7 /* IoTVersion.m */; };
+		1ACC7D9D1C44E92C00ACA3E7 /* IoTVersion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ACC7D9B1C44E92C00ACA3E7 /* IoTVersion.xib */; };
+		1ACC7D9F1C44E9B500ACA3E7 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ACC7D9E1C44E9B500ACA3E7 /* Icon@2x.png */; };
 		C36FFD201A89A33100DFEBC2 /* IoTAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = C36FFD1E1A89A33100DFEBC2 /* IoTAbout.m */; };
 		C36FFD211A89A33100DFEBC2 /* IoTAbout.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36FFD1F1A89A33100DFEBC2 /* IoTAbout.xib */; };
 		C36FFD241A89A35C00DFEBC2 /* IoTRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = C36FFD231A89A35C00DFEBC2 /* IoTRecord.m */; };
@@ -149,6 +153,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ACC7D961C44BA8C00ACA3E7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1ACC7D991C44E92C00ACA3E7 /* IoTVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTVersion.h; sourceTree = "<group>"; };
+		1ACC7D9A1C44E92C00ACA3E7 /* IoTVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTVersion.m; sourceTree = "<group>"; };
+		1ACC7D9B1C44E92C00ACA3E7 /* IoTVersion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTVersion.xib; sourceTree = "<group>"; };
+		1ACC7D9E1C44E9B500ACA3E7 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		C36FFD1D1A89A33100DFEBC2 /* IoTAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTAbout.h; sourceTree = "<group>"; };
 		C36FFD1E1A89A33100DFEBC2 /* IoTAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTAbout.m; sourceTree = "<group>"; };
 		C36FFD1F1A89A33100DFEBC2 /* IoTAbout.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTAbout.xib; sourceTree = "<group>"; };
@@ -425,6 +434,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ACC7D971C44BA8C00ACA3E7 /* CoreTelephony.framework in Frameworks */,
 				C3EDEFB61AA5B87400972862 /* CoreLocation.framework in Frameworks */,
 				EE76914C1A43F14900B682DD /* XPGWifiSDK.framework in Frameworks */,
 				EE5D353A1A305293001C1E09 /* libssl.a in Frameworks */,
@@ -509,6 +519,7 @@
 		E282E6B11AAE8A3000437088 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				1ACC7D9E1C44E9B500ACA3E7 /* Icon@2x.png */,
 				E282E6B21AAE8A3000437088 /* advancedFeatures */,
 				E282E6B91AAE8A3000437088 /* alert */,
 				E282E6BD1AAE8A3000437088 /* common */,
@@ -710,6 +721,7 @@
 		EE33B4C01A1C8ED00003854A = {
 			isa = PBXGroup;
 			children = (
+				1ACC7D961C44BA8C00ACA3E7 /* CoreTelephony.framework */,
 				EE33B4CB1A1C8ED00003854A /* AirPurification */,
 				EE33B4CA1A1C8ED00003854A /* Products */,
 			);
@@ -858,6 +870,9 @@
 		EE6BF5BD1A3EDD4E00363385 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				1ACC7D991C44E92C00ACA3E7 /* IoTVersion.h */,
+				1ACC7D9A1C44E92C00ACA3E7 /* IoTVersion.m */,
+				1ACC7D9B1C44E92C00ACA3E7 /* IoTVersion.xib */,
 				C3E3238F1A89A93F0023FF0A /* AccountManager */,
 				C3E323831A89A9080023FF0A /* AdvancedFeatures */,
 				C3E323871A89A9080023FF0A /* MonitoringStatistics */,
@@ -1113,7 +1128,7 @@
 				TargetAttributes = {
 					EE33B4C81A1C8ED00003854A = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 4F4JWNAD79;
+						DevelopmentTeam = PQ4M5DLLZT;
 					};
 				};
 			};
@@ -1142,6 +1157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E282E7231AAE8A3000437088 /* good_bg@2x.png in Resources */,
+				1ACC7D9F1C44E9B500ACA3E7 /* Icon@2x.png in Resources */,
 				E282E7511AAE8A3000437088 /* start_time@2x.png in Resources */,
 				E282E7241AAE8A3000437088 /* good_word@2x.png in Resources */,
 				EE7693541A44019400B682DD /* menu-button@2x.png in Resources */,
@@ -1154,6 +1170,7 @@
 				E282E70B1AAE8A3000437088 /* stripe@2x.png in Resources */,
 				E282E7161AAE8A3000437088 /* about@3x.png in Resources */,
 				E282E6B01AAE8A0700437088 /* IoTFaultListCell.xib in Resources */,
+				1ACC7D9D1C44E92C00ACA3E7 /* IoTVersion.xib in Resources */,
 				E282E73C1AAE8A3000437088 /* lock_not_select@2x.png in Resources */,
 				E282E7221AAE8A3000437088 /* fault_tips@2x.png in Resources */,
 				E282E73D1AAE8A3000437088 /* lock_select@2x.png in Resources */,
@@ -1266,6 +1283,7 @@
 				C3E3238D1A89A9080023FF0A /* IoTMonitoringStatistics.m in Sources */,
 				C3E323961A89A93F0023FF0A /* IoTAccountManager.m in Sources */,
 				C3E3238B1A89A9080023FF0A /* IoTAdvancedFeatures.m in Sources */,
+				1ACC7D9C1C44E92C00ACA3E7 /* IoTVersion.m in Sources */,
 				EE5C0E5B1A4018C80019CFDD /* IoTMainController.m in Sources */,
 				EE7693591A44019800B682DD /* UICircularSlider.m in Sources */,
 				EE76934E1A44019400B682DD /* SlideNavigationContorllerAnimatorFade.m in Sources */,
@@ -1383,6 +1401,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IoTProcessModel/IoTProcessModel/Utils/XPGWifiSDK",
@@ -1404,8 +1423,9 @@
 					"$(PROJECT_DIR)/Utils/IoTProcessModel",
 					"$(PROJECT_DIR)/Utils/ZBarSDK",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zono.AirPurification;
 				PRODUCT_NAME = AirPurification;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9e4d114e-7cff-426d-8dd0-37b934d57c0e";
 			};
 			name = Debug;
 		};
@@ -1416,6 +1436,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IoTProcessModel/IoTProcessModel/Utils/XPGWifiSDK",
@@ -1437,8 +1458,9 @@
 					"$(PROJECT_DIR)/Utils/IoTProcessModel",
 					"$(PROJECT_DIR)/Utils/ZBarSDK",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.zono.AirPurification;
 				PRODUCT_NAME = AirPurification;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "9e4d114e-7cff-426d-8dd0-37b934d57c0e";
 			};
 			name = Release;
 		};
