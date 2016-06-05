@@ -28,8 +28,8 @@
 #import "IoTAlertView.h"
 
 // App ID 和 Product Key
-static NSString * const IOT_APPKEY = @"31ee082710384a71bec246e1c9695920";
-NSString * const IOT_PRODUCT       = @"b3a206e380bc4a3c8c157ff4b5491633";
+static NSString * const IOT_APPKEY = @"your_app_id";
+NSString * const IOT_PRODUCT       = @"your_product_key";
 
 @interface AppDelegate ()
 {
@@ -43,7 +43,7 @@ NSString * const IOT_PRODUCT       = @"b3a206e380bc4a3c8c157ff4b5491633";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //初始化
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"]];
-    model = [IoTProcessModel startWithAppID:IOT_APPKEY appSecret:@"859fd2b5fef64a049f4bc8f7695abe71" product:IOT_PRODUCT productJson:data];
+    model = [IoTProcessModel startWithAppID:IOT_APPKEY appSecret:@"your_app_secret" product:IOT_PRODUCT productJson:data];
     model.delegate = self;
     
     //用户未注册-->登录
