@@ -17,7 +17,7 @@
 
     意见反馈：http://form.mikecrm.com/s1ZJxj
     
-Gizwits Air-Purifier Demo App
+Gizwits Air-Purifier iOS App
 
     这是一款使用XPGWifiSDK的开源代码示例APP，可以帮助开发者快速入手，使用XPGWifiSDK开发连接机智云的物联APP。
 
